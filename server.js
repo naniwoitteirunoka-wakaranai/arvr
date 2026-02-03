@@ -6,7 +6,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // ADD THIS TEST ROUTE:
 app.get('/', (req, res) => {
-    res.sendFile('lab6.html');
+    res.send('<h1> Meow <h1>');
 });
 
 const PORT = process.env.PORT || 3000;
