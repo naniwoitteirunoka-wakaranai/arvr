@@ -12,10 +12,12 @@ var currentLatitude = position.coords.latitude;
 var currentLongitude = position.coords.longitude;
 console.log("Latitude= " + currentLatitude);
 console.log("Longitude= " + currentLongitude);
+document.getElementById('currentLocation').innerHTML =
+  `Lat: ${currentLatitude}<br>Lon: ${currentLongitude}`;
 
 var locations = [
 { id: "box", lat:12.9564672,lon:77.6208384, threshold: 0.005 },
-{ id: "cylinder", lat: 12.90509057, lon: 77.55971556, threshold: 0.005 },
+{ id: "cylinder", lat: 12.976237787634481, lon: 77.50416104820695, threshold: 0.005 },
 { id: "sphere", lat: 12.9564672,lon: 77.594624,threshold: 0.005}
 ];
 locations.forEach(location => {
@@ -42,9 +44,10 @@ document.getElementById('currentLocation').innerHTML =
 getLocation();
 });</script>
 </head>
-<body><h3 id="currentLocation">Fetching location...</h3>
+<body style="background-color: black;"><h3 style="color: white;"
+    id="currentLocation">Fetching location...</h3>
 <a-scene><a-box id="box" position="0 0.5 -3" rotation="0 45 0" color="red" visible="false"></a-box>
-<a-cylinder id="cylinder" position="2 0.5 -3" radius="0.5" height="1.5" color="blue" visible="false"></a-cylinder>
+<a-cylinder id="cylinder" position="2 0.5 -3" radius="0.5" height="1.5" color="#05767a" visible="false"></a-cylinder>
 <a-sphere id="sphere" position="-2 0.75 -3" radius="0.75" color="green" visible="false"></a-sphere>
 <a-camera gps-camera rotation-reader></a-camera>
 </a-scene>
