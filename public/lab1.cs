@@ -3,7 +3,7 @@ public class AnimationController : MonoBehaviour
 {
 public Animator animator;
 public ParticleSystem ps;
-void Start ()
+void Start()
 {
 animator=GetComponent<Animator>();
 ps=GetComponentInChildren<ParticleSystem>();
